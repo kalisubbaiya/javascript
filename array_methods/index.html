@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <table>
+            <caption>Array Methods</caption>
+            <tr>
+                <th>S.NO</th>
+                <th>METHODS</th>
+                <th>DESCRIPTION</th>
+                <th>INPUT</th>
+                <th>OUTPUT</th>
+                <th>PROGRAM</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>concat()</td>
+                <td>It is used to merge 
+                    two or more arrays.
+                    This method does not change 
+                    the existing arrays, but 
+                    instead returns a new array.</td>
+                <td>let a1=[1,2,3];
+                    let a2=[4,5];
+                    let a3=a1.concat(a2);</td>
+                <td>concat is 1,2,3,4,5</td>
+                <td>let a1=[1,2,3];
+                    let a2=[4,5];
+                    let a3=a1.concat(a2);
+                    document.write(a3);</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>constructor</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>entries</td>
+                <td> returns a new Array Iterator
+                     object that contains the 
+                     key/value pairs for each 
+                     index in the array.</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>filter</td>
+                <td>It creates a shallow copy of
+                    a portion of a given array, 
+                    filtered down to just the elements
+                    from the given array that pass the
+                    test implemented by the provided function.</td>
+                <td>let a=[12,22,18,7,60];<br>
+                    const result=filt.filter(filt=>filt>18);
+                </td>
+                <td>filter is 22,60</td>
+                <td>let filt=[12,22,18,7,60];
+                    const result=filt.filter(filt=>filt>18);
+                    document.write("filter is "+result);</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>find</td>
+                <td>returns the first element in the
+                    provided array that satisfies the
+                    provided testing function. 
+                    If no values satisfy the testing
+                    function, undefined is returned.</td>
+                <td>let find1=[12,22,18,7,60];
+                    const find_res=find1.find(find1=>find1>18);</td>
+                <td>find is 22</td>
+                <td>let find1=[12,22,18,7,60];
+                    const find_res=find1.find(find1=>find1>18);
+                    document.write("find is "+find_res);</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>findIndex</td>
+                <td>returns the index of the
+                    first element in an array that 
+                    satisfies the provided testing function.
+                    If no elements satisfy the testing
+                    function, -1 is returned.</td>
+                <td>let find1=[12,22,18,7,60];
+                    const find_res1=find1.findIndex(find1=>find1>18);
+                    document.write("findIndex is "+find_res1);</td>
+                <td>findIndex is 1</td>
+                <td>let find1=[12,22,18,7,60];
+                    const find_res1=find1.findIndex(find1=>find1>18);
+                    document.write("findIndex is "+find_res1);</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>findLastIndex</td>
+                <td>It  iterates the array in 
+                    reverse order and returns the
+                    index of the first element that 
+                    satisfies the provided testing function.
+                    If no elements satisfy the testing 
+                    function, -1 is returned.</td>
+                <td>let find1=[12,22,18,7,60];
+                    const find_res2=find1.findLastIndex(find1=>find1>18);
+                    document.write("findLastIndex is "+find_res2);</td>
+                <td>findLastIndex is 4</td>
+                <td>let find1=[12,22,18,7,60];
+                    const find_res2=find1.findLastIndex(find1=>find1>18);
+                    document.write("findLastIndex is "+find_res2);</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>indexOf</td>
+                <td>returns the first index
+                    at which a given element 
+                    can be found in the array, 
+                    or -1 if it is not present.</td>
+                <td>const friuts=["apple","mango","orange","banana"];</td>
+                <td>index of banana is 3</td>
+                <td>const friuts=["apple","mango","orange","banana"];
+                    document.write("index of banana is "+friuts.indexOf("banana"));</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>lastIndesOf</td>
+                <td>returns the last index at which a given element 
+                    can be found in the array, or -1 if it is not present. 
+                    The array is searched backwards, starting at fromIndex</td>
+                <td>const friuts=["apple","mango","orange","banana"];</td>
+                <td></td>
+                <td>document.write("lastIndexOf banana is "+friuts.lastIndexOf("banana"));
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>map</td>
+                <td> creates a new array populated with the results of calling 
+                    a provided function on every element in the calling array.</td>
+                <td>const array5=[12,22,33,44,55];
+                    const map1 = array5.map(x => x > 40);
+                    const map2 = array5.map(x => x * 2);</td>
+                <td>map1 is false,false,false,true,true
+                    map2 is 24,44,66,88,110</td>
+                <td>const array5=[12,22,33,44,55];
+                    const map1 = array5.map(x => x > 40);
+                    document.write("map1 is "+map1);
+                    const map2 = array5.map(x => x * 2);
+                    document.write("map2 is "+map2);
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>pop</td>
+                <td>removes the last element from an array and returns that element. This method changes the length of the array.</td>
+                <td>const array5=[12,22,33,44,55];</td>
+                <td>pop is 55
+                    after pop is 12,22,33,44</td>
+                <td>const array5=[12,22,33,44,55];
+                    document.write("pop is "+array5.pop());
+                    document.write("after pop is "+array5);
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>push</td>
+                <td>adds one or more elements to the end of an array and returns the new length of the array.</td>
+                <td>const array5=[12,22,33,44,55];</td>
+                <td>after push array5 length is 5
+                    after push is 12,22,33,44,66</td>
+                <td>const array5=[12,22,33,44,55];
+                    document.write("after push  array5 length is "+array5.push(66));
+                    document.write("after push is "+array5);
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>reduce</td>
+                <td>The final result of running the reducer across all elements of the array is a single value.</td>
+                <td>const array6=[1,2,3,4,5]
+                    const reduce1 = array6.reduce((x, y) => x*y);</td>
+                <td>after reduce is 120</td>
+                <td>const array6=[1,2,3,4,5]
+                    const reduce1 = array6.reduce((x, y) => x*y);
+                    document.write("after reduce is "+reduce1);</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>reverse</td>
+                <td>reverses an array in place</td>
+                <td>const array6=[1,2,3,4,5]
+                    array6.reverse()
+                </td>
+                <td>after reverse 5,4,3,2,1</td>
+                <td>const array6=[1,2,3,4,5]
+                    document.write("after reverse "array6.reverse());</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>shift</td>
+                <td>removes the first element from an array and returns that removed element.
+                     This method changes the length of the array.</td>
+                <td>const array7=[11,22,33,44,55,66,77]
+                    array7.shift
+                </td>
+                <td>shift first 11</td>
+                <td>const array7=[11,22,33,44,55,66,77]
+                    document.write("shift first"+array7.shift());</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>slice</td>
+                <td>returns a shallow copy of a portion of an array into a new array object selected from start to end
+                    start=array-length 
+                    end=index of array</td>
+                <td>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+                    animals.slice()</td>
+                <td>after slice -camel,duck,elephant
+                    after slice -camel,duck</td>
+                <td>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+                    document.write("after slice -"+animals.slice(2));
+                    document.write("after slice -"+animals.slice(2,4));
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>toLocalString</td>
+                <td>returns a string representing the elements of the array.</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>toString</td>
+                <td> returns a string representing the specified array and its elements.</td>
+                <td>const array7=[11,22,33,44,55,66,77]
+                    array7.toString()
+                </td>
+                <td>after tostring -"22,33,44,55,66,77"</td>
+                <td>const array7=[11,22,33,44,55,66,77]
+                    document.write("after tostring -"+array7.toString());</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>unshift</td>
+                <td>adds one or more elements to the beginning of an array and returns the new length of the array.</td>
+                <td>const array7=[11,22,33,44,55,66,77]
+                    array7.unshift("hello")</td>
+                <td>after unshift -hello,22,33,44,55,66,77</td>
+                <td>const array7=[11,22,33,44,55,66,77]
+                    document.write("after unshift -"+array7.unshift("hello"));
+                    document.write(array7)</td>
+            </tr>
+        </table>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
