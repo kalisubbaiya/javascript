@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+}
+table,th,tr,td{
+    border:1px solid #000;
+    border-collapse: collapse;
+}
+th{
+    background-color: green;
+    color:#fff;
+}
+td{
+    color: green;
+}

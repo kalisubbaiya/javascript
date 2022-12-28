@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date methods</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <table>
+            <caption>Date-GET Methods</caption>
+            <tr>
+                <th>S.NO</th>
+                <th>METHODS</th>
+                <th>DESCRIPTION</th>
+                <th>INPUT</th>
+                <th>OUTPUT</th>
+                <th>PROGRAM</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>getDate</td>
+                <td>The getDate() method returns the day of the month for the specified date according to local time.</td>
+                <td>const date1 = birthday.getDate();</td>
+                <td>4</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30');
+                    const date1 = birthday.getDate();
+                    console.log(date1);</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>getDay</td>
+                <td>The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday</td>
+                <td>const day2 = birthday.getDay();</td>
+                <td>6</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30');
+                    const date2 = birthday.getDay();
+                    console.log(date2);</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>getFullYear</td>
+                <td>The getFullYear() method returns the year of the specified date according to local time.</td>
+                <td>const year1 = birthday.getFullYear();</td>
+                <td>1996</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30');
+                    console.log(birthday.getFullYear());
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>getHours</td>
+                <td>The getHours() method returns the hour for the specified date, according to local time.</td>
+                <td>const hour1 = birthday.getHours();</td>
+                <td>23</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30');
+                    console.log(birthday.getHours());
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>getMilliseconds</td>
+                <td>The getMilliseconds() method returns the milliseconds in the specified date according to local time.</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getMilliseconds());</td>
+                <td>120</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getMilliseconds());
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>getMinutes</td>
+                <td>The getMinutes() method returns the minutes in the specified date according to local time</td>
+                <td>console.log(birthday.getMinutes());</td>
+                <td>15</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getMinutes());</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>getMonth</td>
+                <td>The getMonth() method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year).</td>
+                <td>console.log(birthday.getMonth());</td>
+                <td>4</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getMonth());</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>getseconds</td>
+                <td>The getSeconds() method returns the seconds in the specified date according to local time</td>
+                <td>console.log(birthday.getSeconds());</td>
+                <td>30</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getSeconds());</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>getTime</td>
+                <td>The getTime() method returns the number of milliseconds since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.</td>
+                <td>console.log(birthday.getTime());</td>
+                <td>831231930120</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getTime());</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>getTimezoneOffset</td>
+                <td>The getTimezoneOffset() method returns the difference, in minutes, between a date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.</td>
+                <td>console.log(birthday.getTimezoneOffset());</td>
+                <td>-330</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getTimezoneOffsest());</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>getYear</td>
+                <td>The getYear() method returns the year in the specified date according to local time. Because getYear() does not return full years ("year 2000 problem"), it is no longer used and has been replaced by the getFullYear() method.</td>
+                <td>console.log(birthday.getYear());</td>
+                <td>96</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    console.log(birthday.getYear());                    
+                </td>
+            </tr>
+        </table>
+    </section><br>
+    <section>
+        <table>
+            <caption>SET METHODS</caption>
+            <tr>
+                <th>S.NO</th>
+                <th>METHODS</th>
+                <th>DESCRIPTION</th>
+                <th>INPUT</th>
+                <th>OUTPUT</th>
+                <th>PROGRAM</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>setDate</td>
+                <td>The setDate() method changes the day of the month of a given Date instance, based on local time.</td>
+                <td>birthday.setDate(25);</td>
+                <td>25</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    birthday.setDate(25);
+                    console.log(birthday.getDate());</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>setFullYear</td>
+                <td>The setFullYear() method sets the full year for a specified date according to local time. Returns new timestamp</td>
+                <td>birthday.setFullYear(2022);</td>
+                <td>2022</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    birthday.setFullYear(2022);
+                    console.log(birthday.getFullYear());</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>setHours</td>
+                <td>The setHours() method sets the hours for a specified date according to local time</td>
+                <td>birthday.setHours(10, 05, 50);</td>
+                <td>Wed May 25 2022 10:05:50 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    birthday.setHours(10, 05, 50);
+                    console.log(birthday);</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>setMilliseconds</td>
+                <td>The setMilliseconds() method sets the milliseconds for a specified date according to local time.</td>
+                <td>birthday.setMilliseconds(300);</td>
+                <td>300</td>
+                <td>const birthday = new Date('May 4, 1996 23:15:30:120');
+                    birthday.setMilliseconds(300);
+                    console.log(birthday.getMilliseconds());</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>setMinutes</td>
+                <td>The setMinutes() method sets the minutes for a specified date according to local time.</td>
+                <td>birthday.setMinutes(35);</td>
+                <td>Wed May 25 2022 10:35:50 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('Dec 25, 2022 10:05:50:300');
+                    birthday.setMinutes(35);
+                    console.log(birthday);</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>setMonth</td>
+                <td>The setMonth() method sets the month for a specified date according to the currently set year.</td>
+                <td>birthday.setMonth(11);</td>
+                <td>Sun Dec 25 2022 10:35:50 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('Dec 25, 2022 10:35:50:300');
+                    birthday.setMonth(11);
+                    console.log(birthday);</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>setSeconds</td>
+                <td>The setSeconds() method sets the seconds for a specified date according to local time.</td>
+                <td>birthday.setSeconds(18);</td>
+                <td>Sun Dec 25 2022 10:35:18 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('Dec 25, 2022 10:35:50:300');
+                    birthday.setSeconds(18);
+                    console.log(birthday);</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>setTime</td>
+                <td>The setTime() method sets the Date object to the time represented by a number of milliseconds</td>
+                <td>const tenMinutesInMillis = 10 * 60 * 1000;
+                    birthday.setTime(birthday.getTime()+tenMinutesInMillis);</td>
+                <td>Sun Dec 25 2022 10:45:18 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('Dec 25, 2022 10:35:50:300');
+                    const tenMinutesInMillis = 10 * 60 * 1000;
+                    birthday.setTime(birthday.getTime()+tenMinutesInMillis);
+                    console.log(birthday);</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>setYear</td>
+                <td>The legacy setYear() method sets the year for a specified date according to local time.</td>
+                <td>birthday.setYear(95);</td>
+                <td>Mon Dec 25 1995 10:45:18 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('Dec 25, 2022 10:35:50:300');
+                    birthday.setYear(95);
+                    console.log(birthday);</td>
+            </tr>
+        </table>
+    </section><br>
+    <section>
+        <table>
+            <caption>CONVERT METHODS</caption>
+            <tr>
+                <th>S.NO</th>
+                <th>METHODS</th>
+                <th>DESCRIPTION</th>
+                <th>INPUT</th>
+                <th>OUTPUT</th>
+                <th>PROGRAM</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>toDateString</td>
+                <td>The toDateString() method returns the date portion of a Date object interpreted in the local timezone in English</td>
+                <td>console.log(birthday.toDateString());</td>
+                <td>Mon Dec 25 1995</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toDateString());</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>toISOString</td>
+                <td>The toISOString() method returns a string in simplified extended ISO format (ISO 8601), which is always 24 or 27 characters long</td>
+                <td>console.log(birthday.toISOString());</td>
+                <td>1995-12-25T05:15:18.300Z</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toISOString());</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>toJSON</td>
+                <td>The toJSON() method returns a string representation of the Date object.</td>
+                <td>console.log(birthday.toJSON());</td>
+                <td>1995-12-25T05:15:18.300Z</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toJSON());</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>toGMTString</td>
+                <td>The toGMTString() method returns a string representation of the GMT Date object.</td>
+                <td>console.log(birthday.toGMTString());</td>
+                <td>Mon, 25 Dec 1995 05:15:18 GMT</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toGMTString());</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>toLocaleDateString</td>
+                <td>The toLocaleDateString() method returns a string with a language-sensitive representation of the date portion of the specified date in the user agent's timezone.</td>
+                <td>console.log(birthday.toLocaleDateString());</td>
+                <td>12/25/1995</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toLocaleDateString());</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>toLocaleString</td>
+                <td>The toLocaleString() method returns a string with a language-sensitive representation of this date.</td>
+                <td>console.log(birthday.toLocaleString());</td>
+                <td>12/25/1995, 10:45:18 AM</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toLocaleString());</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>toLocaleTimeString</td>
+                <td>The toLocaleTimeString() method returns a string with a language-sensitive representation of the time portion of the date.</td>
+                <td>console.log(birthday.toLocaleTimeString());</td>
+                <td>10:45:18 AM</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toLocaleTimeString());</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>toString</td>
+                <td>The toString() method returns a string representing the specified Date object interpreted in the local timezone.</td>
+                <td>console.log(birthday.toString());</td>
+                <td>Mon Dec 25 1995 10:45:18 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toString());</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>toTimeString</td>
+                <td>The toTimeString() method returns the time portion of a Date object interpreted in the local timezone in English.</td>
+                <td>console.log(birthday.toTimeString());</td>
+                <td>10:45:18 GMT+0530 (India Standard Time)</td>
+                <td>const birthday = new Date('Dec 25, 1995 10:35:50:300');
+                    console.log(birthday.toTimeString());</td>
+            </tr>
+        </table>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
