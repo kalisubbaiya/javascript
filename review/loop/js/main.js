@@ -34,7 +34,7 @@
     const person= {fname:"kali", mname:"raj", lname:"subbaiyakani"};
 
     for (let x in person){
-        console.log(person[x]);
+        console.log(x,person[x]);
     }
 
 //  3. for of
@@ -47,7 +47,7 @@
     const person1= ['kali','raj','subbaiyakani'];
 
     for (let x in person1){
-        console.log(x);
+        console.log(x,person1[x]);
     }
 
     for (let x of person1){
