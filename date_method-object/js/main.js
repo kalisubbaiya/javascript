@@ -1,3 +1,13 @@
+//          DATE METHODS
+
+//      The Date object works with dates and times.
+//      Date objects are created with new Date().
+//      There are four ways of ceating a date
+        //      new Date();
+        //      new Date(milliseconds);
+        //      new Date(dateString);
+        //      new Date(year, month, day, hours, minutes, seconds, milliseconds);
+
 //----GET METHODS-----//
 
 //--1.getDate
@@ -28,13 +38,33 @@ console.log(birthday.getMonth());
 console.log(birthday.getSeconds());
 
 //--9.getTime
-console.log(birthday.getTime());
+console.log(birthday.getTime()); // returns the number of milliseconds since January 1, 1970 00:00:00.
 
 //--10.getTimezoneOffset
 console.log(birthday.getTimezoneOffset());
 
 //--11.getYear
 console.log(birthday.getYear());
+
+
+//  prototype allows you to add new properties and methods to dates.
+Date.prototype.myMonth = function()  {
+    if (this.getMonth() == 0) {return "January"};
+    if (this.getMonth() == 1) {return "February"};
+    if (this.getMonth() == 2) {return "March"};
+    if (this.getMonth() == 3) {return "April"};
+    if (this.getMonth() == 4) {return "May"};
+    if (this.getMonth() == 5) {return "June"};
+    if (this.getMonth() == 6) {return "July"};
+    if (this.getMonth() == 7) {return "August"};
+    if (this.getMonth() == 8) {return "September"};
+    if (this.getMonth() == 9) {return "October"};
+    if (this.getMonth() == 10) {return "November"};
+    if (this.getMonth() == 11) {return "December"};
+  };
+  
+  const d = new Date();
+  console.log(d.myMonth());
 
 
 //----SET METHODS-----//
