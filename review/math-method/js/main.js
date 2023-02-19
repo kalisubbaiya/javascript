@@ -29,9 +29,13 @@
         // Math.round(x)	Returns x rounded to its nearest integer
           console.log(Math.round(4.6)) //------> 5
           console.log(Math.round(4.4)) //------> 4
+          console.log(Math.round(-4.4)) //------> -4
+          console.log(Math.round(-4.6)) //------> -5
         // Math.ceil(x)	Returns x rounded up to its nearest integer
           console.log(Math.ceil(4.6)) //------> 5
           console.log(Math.ceil(4.4)) //------> 5
+          console.log(Math.ceil(-4.4)) //------> -4
+          console.log(Math.ceil(-4.6)) //------> -4
         // Math.floor(x)	Returns x rounded down to its nearest integer
           console.log(Math.floor(4.9)) //------> 4
           console.log(Math.floor(-4.9)) //------> -5
@@ -40,6 +44,11 @@
           console.log(Math.trunc(4.9)) //------> 4
           console.log(Math.trunc(-4.9)) //------> -4
           console.log(Math.trunc(4.4)) //------> 4
+
+
+        // Math.fround()
+        // The Math.fround() static method returns the nearest 32-bit single precision float representation of a number.
+          console.log("fround", Math.fround(4.056));
 
 console.log(Math.sign(4));  //-----> return 1
 console.log(Math.sign(-4));  //-----> return -1
@@ -54,3 +63,35 @@ console.log(Math.min(0, 100, -50,10));
 console.log(Math.max(0, 100, -50,10));
 
 console.log(Math.random()); // returns random number 0 to 1
+
+console.log(Math.cbrt(125));
+
+function myFunc(){
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+
+  document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+}
+
+cont = document.querySelector(".container");
+
+let myName = document.createElement("h1");
+cont.appendChild(myName);
+myName.innerHTML = "KALIRAJ";
+
+let inp = document.createElement("input");
+inp.setAttribute("id","nameColor");
+cont.appendChild(inp);
+let inpValue = inp.value.trim();
+
+let btn = document.createElement("button");
+btn.setAttribute("onClick","changeColor()");
+btn.setAttribute("type","submit");
+cont.appendChild(btn);
+btn.innerHTML = "click here"
+
+function changeColor(){
+  let inpValue = inp.value.trim();
+  myName.style.color = `${inpValue}`;
+}

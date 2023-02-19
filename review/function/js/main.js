@@ -129,23 +129,24 @@ var r=console.log(square(6));
 
 // sum(num1, num2, operator);
 
-var myName=prompt("Type your name or anything");
-var noOfVowel=0;
-var vowels = ["a", "e", "i", "o", "u"];
-function countVowel() {
-    for (i=0; i<myName.length; i++){
-        for (j=0; j<i; j++){
-            if (myName.i === vowels[j]){
-                noOfVowel+=1;
-            }
-        }
-    }
-    console.log(noOfVowel);
-}
+// var myName=prompt("Type your name or anything");
+// var noOfVowel=0;
+// var vowels = ["a", "e", "i", "o", "u"];
+// function countVowel() {
+//     for (i=0; i<myName.length; i++){
+//         for (j=0; j<i; j++){
+//             if (myName.i === vowels[j]){
+//                 noOfVowel++;
+//             }
+//         }
+//     }
+//     return noOfVowel
+// }
 
-(countVowel(myName));
+// console.log(countVowel(noOfVowel));
 
 
+var myName = prompt("enter your name")
 function countVowel(myName) {
     let count = 0;
     const vowels = ["a", "e", "i", "o", "u"];
@@ -158,4 +159,4 @@ function countVowel(myName) {
     return count;
 }
 
-console.log(countVowel("kaliraj"));
+console.log(countVowel(myName));
