@@ -83,7 +83,6 @@ myName.innerHTML = "KALIRAJ";
 let inp = document.createElement("input");
 inp.setAttribute("id","nameColor");
 cont.appendChild(inp);
-let inpValue = inp.value.trim();
 
 let btn = document.createElement("button");
 btn.setAttribute("onClick","changeColor()");

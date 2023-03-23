@@ -135,3 +135,95 @@ console.log(birthday.toString());
 
 //--9.toTimeString
 console.log(birthday.toTimeString());
+
+
+// let date = new Date();
+// let setDay = parseInt(prompt("Enter a date"));
+// date.setDate(setDay);
+// let day = date.getDay();
+
+// if (day === 0 || day === 6){
+//   console.log("the given day is weekend");
+//   console.log(day);
+// }
+// else{
+//   console.log("the given day is not a weekend. It is a weekday");
+//   console.log(day);
+// }
+
+
+// var dates = new Date();
+
+var date = new Date()
+date.setDate(date.getDate()-1);
+console.log(date);
+
+
+
+let DigitalClock = setInterval(() =>{
+  let digital = new Date().toLocaleTimeString();
+  document.getElementById("demo").innerHTML = digital;
+},1000)
+
+
+// let today = new Date();
+// let dayofWeek = today.getDay();
+// let startofWeek = new Date(today.getTime() - dayofWeek * 24 * 60 * 60 * 1000);
+// console.log(startofWeek.toString());
+
+function getWeekStartDate() {
+  var today = new Date();
+  var day = today.getDay();
+  var startDate = new Date(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate() - day
+  );
+  console.log(startDate.toDateString());
+}
+getWeekStartDate();
+
+
+
+// let date7 = new Date("feb 22, 2020 12:00:00");
+// let date8 = new Date("June 22, 2020 13:00:00");
+
+// let diffTime = date8.getTime() - date7.getTime();
+// let diffHours = diffTime / (1000 * 60 * 60); 
+
+// console.log(Math.abs(diffHours + " hours"));
+
+
+let date7 = new Date('Feb 22, 2023 14:00:00');
+let date8 = new Date('Feb 22, 2023 12:00:00');
+let differenceInTime = date8.getTime() - date7.getTime();
+let differenceInHours = differenceInTime / (1000*60*60);
+var differ=Math.abs(Math.round(differenceInHours));
+
+console.log(differ + " Hours");
+
+
+let currentdate = new Date();
+let birthDay = new Date('May 24, 1996');
+
+let yearDiff = currentdate.getFullYear() - birthDay.getFullYear();
+let monthDiff = currentdate.getMonth() - birthDay.getMonth();
+let dayDiff = currentdate.getDate() - birthDay.getDate();
+
+if (monthDiff < 0){
+  monthDiff = 12 + monthDiff;
+  yearDiff -=1;
+  if (dayDiff < 0 ){
+    dayDiff = 365 + dayDiff;
+    monthDiff -= 1;
+  }
+  let age = `${yearDiff} years ${monthDiff} months ${dayDiff} days`
+  console.log(age);
+}
+
+
+let date9 = new Date('Feb 21, 2023 14:00:00');
+let date10 = new Date('Feb 22, 2023 12:00:00');
+let timeDiff = Math.abs(date10.getTime() - date9.getTime());
+timeDiff = timeDiff / (1000*60);
+console.log(timeDiff);
